@@ -1,9 +1,40 @@
+import Image from 'next/image'
 import React from 'react'
 
 const About = () => {
   return (
-    <div>
-      hello
+    <div className='py-24 dark:bg-gray-950 '>
+      <div className="w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-16 ">
+        {/* Image Content */}
+        <div>
+          <Image 
+           src={''}
+           alt='About us'
+           width={500}
+           height={500}
+          />
+        </div>
+        {/* Text Content */}
+        <div>
+          {/* sub heading */}
+          <div>
+            <h1 className='text-purple-800 dark:text-purple-600 font-medium '>
+              About Us
+            </h1>
+          </div>
+          {/* Heading */}
+          <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black dark:text-white mt-2'>
+            We Are The Leader In Web Design
+          </h1>
+          {/* description */}
+          <p className='text-gray-500 dark:text-gray-200 text-base leading-8 mt-8'>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem maiores quo quae expedita optio possimus aut quos facere earum modi!
+          </p>
+          <p className='text-gray-500 dark:text-gray-200 text-base leading-8 mt-8'>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium doloribus ab vitae impedit dolorem nihil voluptate aspernatur omnis suscipit ex?
+          </p>
+        </div>
+      </div>
     </div>
   )
 }

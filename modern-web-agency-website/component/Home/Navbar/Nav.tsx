@@ -46,9 +46,9 @@ const Nav = ({openNav} : Props ) => {
                 {/* Create Accont Button */}
                 <Link 
                   href= '#_'
-                  className='box-border relative z-20 inline-flex items-center justify-center w-auto px-7 py-2 overflow-hidden font-bold text-white transition-all duration-300 bg-indigo-600 rounded-md cursor-pointer group ring-offset-2 ring-1 ring-indigo-300 ring-offset-indigo-200 hover:ring-offset-indigo-500 ease focus:outline-none '
+                  className='box-border relative z-20 inline-flex items-center justify-center w-auto px-3 py-2 sm:px-7 overflow-hidden font-bold text-white transition-all duration-300 bg-indigo-600 rounded-md cursor-pointer group ring-offset-2 ring-1 ring-indigo-300 ring-offset-indigo-200 hover:ring-offset-indigo-500 ease focus:outline-none '
                   >               
-                    <span className='relativ z-20 items-center text-sm '>
+                    <span className='relative z-20 items-center text-xs sm:text-base '>
                         Create Account
                     </span>
                 </Link>
