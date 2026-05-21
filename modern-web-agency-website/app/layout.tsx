@@ -4,6 +4,8 @@ import "./globals.css";
 import Provider from "@/component/HOC/Provider";
 import ResponsiveNav from "@/component/Home/Navbar/ResponsiveNav";
 
+
+
 const font = Rubik({
   weight:['300','400','500','600','700','800','900']
 })
@@ -26,8 +28,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Provider >
           <ResponsiveNav />
-          {children}
-        
+          {children}        
         </Provider>
         </body>
     </html>

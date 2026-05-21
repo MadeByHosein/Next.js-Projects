@@ -1,5 +1,9 @@
+'use client'
+
 import { ThemeProvider } from 'next-themes'
+import dynamic from 'next/dynamic';
 import {ReactNode} from 'react'
+
 
 const Provider = ({children}: {children: ReactNode }) => {
   return (
@@ -8,7 +12,7 @@ const Provider = ({children}: {children: ReactNode }) => {
      enableSystem
      defaultTheme='system'
     >
-        {children}
+      {children}
     </ThemeProvider>
   )
 }

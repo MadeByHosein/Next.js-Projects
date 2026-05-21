@@ -43,18 +43,19 @@ const Hero = () => {
         }
 
         const setCanvasSize = () => {
-            const dpr = window.devicePixelRatio || 1        /* از dpr برای بهینه سازی نمایش ذرات برای مانیتورهای باکیفیت بالا و رتینا استفاده شده */
+            const dpr = window.devicePixelRatio || 1 /* از dpr برای بهینه سازی نمایش ذرات */
 
-            // ❗ مهم: جلوگیری از جمع شدن scale روی هم
+            canvas.width = window.innerWidth * dpr;         /* عرض داخلی */
+            canvas.height = window.innerHeight * dpr;       /* ارتفاع داخلی */
+
+            canvas.style.width = `${window.innerWidth}px`;  /* عرض ظاهری */
+            canvas.style.height = `${window.innerHeight}px`; /* ارتفاع ظاهری */
+
+            // ❗ مهم: جلوگیری از accumulation transform
             ctx.setTransform(1, 0, 0, 1, 0, 0);
 
-            canvas.width = window.innerWidth * dpr;         /* عرض  داخلی*/
-            canvas.height = window.innerHeight * dpr;       /* ارتفاع  داخلی */
-
-            canvas.style.width = `${window.innerWidth}px`;  /* عرض  ظاهری */
-            canvas.style.height = `${window.innerHeight}px`; /* ارتفاع  ظاهری */
-
-            ctx.scale(dpr, dpr); /* مقیاس در مانیتورهای بزرگتر */
+            // فقط یک بار scale درست
+            ctx.scale(dpr, dpr);
         }
 
         const init = () => {
@@ -69,27 +70,29 @@ const Hero = () => {
         function animate() {
             if (!canvas || !ctx) return;
 
-            ctx.clearRect(0, 0, canvas.width, canvas.height); /* در هر فریم صفحه پاک می شود. اگر نباشد رد ذرات داخل صفحه باقی می ماند */
+            // ❗ مهم: clear بر اساس اندازه واقعی viewport
+            ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
             particles.forEach((particle) => {
                 ctx.beginPath();                                                       /* شروع یک شکل جدید */
-                ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);     /* ترسیم دایره با مختصات و شعاع داده شده */
-                ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`          /* استایل رنگ کردن دایره */
-                ctx.fill()                                                          /* رنگ کردن دایره */
+                ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);       /* دایره */
+                ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`           /* رنگ */
+                ctx.fill()                                                            /* رسم */
 
-                particle.x += particle.speedX;         /* حرکت موقعیت  افقی ذره در هر فریم */
-                particle.y += particle.speedY;         /* حرکت موقعیت  عمودی ذره در هر فریم */
+                particle.x += particle.speedX;   /* حرکت افقی */
+                particle.y += particle.speedY;   /* حرکت عمودی */
 
-                if (particle.x < 0 || particle.x > window.innerWidth) particle.speedX *= -1   /* تغییر جهت عرضی در برخود به کناره های عمودی صفحه */
-                if (particle.y < 0 || particle.y > window.innerHeight) particle.speedY *= -1  /* تغییر جهت ارتفاعی در برخود به کناره های افقی صفحه */
+                // برخورد با لبه‌ها
+                if (particle.x < 0 || particle.x > window.innerWidth) particle.speedX *= -1
+                if (particle.y < 0 || particle.y > window.innerHeight) particle.speedY *= -1
             })
 
-            animationId = requestAnimationFrame(animate)             /* تکرار انیمیشن*/
+            animationId = requestAnimationFrame(animate) /* loop */
         }
 
         animate();
 
-        const handleResize = () => { /* وقتی کاربر پنجره مرورگر رو بزرگ یا کوچک کنه، کنواس هم اندازه‌ش رو بروز می‌کنه */
+        const handleResize = () => { /* وقتی کاربر پنجره رو تغییر اندازه بده */
             setCanvasSize();
             createParticles(); // جلوگیری از بهم‌ریختگی بعد resize
         }
@@ -97,7 +100,7 @@ const Hero = () => {
         window.addEventListener('resize', handleResize)
 
         return () => {
-            window.removeEventListener('resize', handleResize) /* حذف برای جلوگیری از مموری لیک */
+            window.removeEventListener('resize', handleResize) /* جلوگیری از memory leak */
             cancelAnimationFrame(animationId)
         }
 

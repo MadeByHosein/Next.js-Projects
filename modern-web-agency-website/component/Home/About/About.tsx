@@ -8,7 +8,7 @@ const About = () => {
         {/* Image Content */}
         <div>
           <Image 
-           src={''}
+           src={'/images/a1.png'}
            alt='About us'
            width={500}
            height={500}
@@ -33,6 +33,39 @@ const About = () => {
           <p className='text-gray-500 dark:text-gray-200 text-base leading-8 mt-8'>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium doloribus ab vitae impedit dolorem nihil voluptate aspernatur omnis suscipit ex?
           </p>
+          {/* Stats */}
+          <div className='mt-10'>
+            <div className='flex items-center justify-between'>
+
+              <div >
+                <h1 className='text-3xl md:text-4xl lg:text-6xl font-bold text-pink-700'>
+                  53K
+                </h1>
+                <p className='text-center text-xs sm:text-sm md:text-base font-medium text-gray-500'>
+                  Layout Done
+                </p>
+              </div>
+
+              <div >
+                <h1 className='text-3xl md:text-4xl lg:text-6xl font-bold text-pink-700'>
+                  10K
+                </h1>
+                <p className='text-center text-xs sm:text-sm md:text-base font-medium text-gray-500'>
+                  Project Done
+                </p>
+              </div>
+
+              <div >
+                <h1 className='text-3xl md:text-4xl lg:text-6xl font-bold text-pink-700'>
+                  120
+                </h1>
+                <p className='text-center text-xs sm:text-sm md:text-base font-medium text-gray-500'>
+                  Get Awards
+                </p>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>

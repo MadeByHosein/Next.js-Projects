@@ -1,11 +1,11 @@
-import About from "../About/About"
-import Hero from "./Hero/Hero"
+import {Hero , About , Services} from '../Home'
 
 const Home = () => {
   return (
     <div className="overflow-hidden">
       <Hero />
-      <About />npm
+      <About />
+      <Services />
     </div>
   )
 }
