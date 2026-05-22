@@ -1,5 +1,5 @@
 import React from 'react'
-import {pricingData} from '../../db/pricingData'
+import {pricingData} from '../../../db/pricingData'
 
 
 const Price = () => {
