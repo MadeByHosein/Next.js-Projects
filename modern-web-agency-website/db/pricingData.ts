@@ -1,4 +1,3 @@
-// src/data/pricing-data.ts
 
 export type PricingDataType = {
   id: number;
