@@ -50,7 +50,7 @@ const ClientReview = () => {
                         <ClientReviewCard user={user}/>
                     </div>
                 ))}
-            </Carousel>;
+            </Carousel>
 
             </div>
         </div>     

@@ -18,7 +18,7 @@ const ClientReviewCard = ({user}:{user: userReviewData}) => {
             {user.review}
         </p>
         <div className="w-full h-[1.2px] bg-gray-600/10 my-6 "/>
-        <div className="flex items-center space-x-4 mt-auto">
+        <div className="flex items-center space-x-4 ">
             <Image 
                 src={user.userImage}
                 alt="users images"
@@ -26,7 +26,7 @@ const ClientReviewCard = ({user}:{user: userReviewData}) => {
                 height={50}
                 className="rounded-full"
             />
-            <div className="h-[90px]">
+            <div className="h-[90px] flex flex-col justify-center">
                 <h1 className="font-bold text-gray-800">
                     {user.name}
                 </h1>
