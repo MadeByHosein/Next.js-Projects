@@ -153,7 +153,7 @@ const Hero = () => {
                     </Link>
 
                     <Link
-                        href={'#'}
+                        href={'#contact'}
                         className="inline-flex items-center justify-center text-white dark:text-white px-8 py-4 border rounded-full border-white font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl "
                     >
                         <span>Contact Us</span>

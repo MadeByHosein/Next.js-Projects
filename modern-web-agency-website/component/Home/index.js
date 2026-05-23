@@ -5,4 +5,5 @@ export {default as WhyChoose} from './WhyChoose/WhyChoose'
 export {default as Price} from './Price/Price'
 export {default as ClientReview} from './ClientReview/ClientReview'
 export {default as Order} from './Order/Order'
+export {default as Contact} from './Contact/Contact'
 
