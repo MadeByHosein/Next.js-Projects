@@ -6,7 +6,7 @@ const About = () => {
     <div className='py-20 dark:bg-gray-950 '>
       <div className="w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-16 ">
         {/* Image Content */}
-        <div>
+        <div data-aos='fade-left' data-aos-anchor-placement='top-center'>
           <Image 
            src={'/images/a1.png'}
            alt='About us'
@@ -15,7 +15,7 @@ const About = () => {
           />
         </div>
         {/* Text Content */}
-        <div>
+        <div data-aos='fade-right' data-aos-anchor-placement='top-center' data-aos-delay='200'>
           {/* sub heading */}
           <div>
             <h1 className='text-purple-800 dark:text-purple-600 font-medium '>

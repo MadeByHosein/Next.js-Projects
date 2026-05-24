@@ -7,7 +7,10 @@ const WhyChoose = () => {
     <div>
         {/* Text Content */}
       <div className="py-20 p-5 sm:p-10 md:p-15 flex flex-col md:flex-row gap-5">
-        <div className="">
+        <div data-aos='fade-left' 
+             data-aos-anchor-placement='top-center' 
+             data-aos-delay='0'>
+
           <h1 className="text-red-500 dark:text-red-300 font-medium">
             Why Choose
           </h1>
@@ -71,7 +74,10 @@ const WhyChoose = () => {
           </div>
         </div>
         {/* Image Content */}
-        <div className="">
+        <div data-aos='fade-right' 
+             data-aos-anchor-placement='top-center' 
+             data-aos-delay='200'>
+
           <Image src={'/images/wc.png'} alt="fdsf" width={1000} height={1000}/>
         </div>
       </div>

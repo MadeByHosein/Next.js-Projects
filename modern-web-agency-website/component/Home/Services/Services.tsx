@@ -15,37 +15,66 @@ const Services = () => {
       </div>
       {/* Service Cards */}
       <div className="w-[80%] mx-auto mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 perspective ">
-        
+
+        <div data-aos='fade-up' 
+             data-aos-anchor-placement='top-center' 
+             data-aos-delay='0'>
           <ServiceCard 
             icon="/images/s1.png" 
             title="Design and develop" 
             description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, sapiente?"
-          />
+            />
+        </div>
+
+        <div data-aos='fade-up' 
+             data-aos-anchor-placement='top-center' 
+             data-aos-delay='100'>
           <ServiceCard 
             icon="/images/s2.png" 
             title="Account setting" 
             description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, sapiente?"
-          />
+            />
+        </div>
+
+        <div data-aos='fade-up' 
+             data-aos-anchor-placement='top-center' 
+             data-aos-delay='200'>
           <ServiceCard 
             icon="/images/s3.png" 
             title="Mange Notification" 
             description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, sapiente?"
-          />
+            />
+        </div> 
+
+        <div data-aos='fade-up' 
+             data-aos-anchor-placement='top-center' 
+             data-aos-delay='300'>
           <ServiceCard 
             icon="/images/s4.png" 
             title="Customer Support" 
             description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, sapiente?"
-          />
+            />
+        </div>
+
+        <div data-aos='fade-up' 
+             data-aos-anchor-placement='top-center' 
+             data-aos-delay='400'>
           <ServiceCard 
             icon="/images/s5.png" 
             title="Email Marketing" 
             description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, sapiente?"
-          />
+            />
+        </div> 
+
+        <div data-aos='fade-up' 
+             data-aos-anchor-placement='top-center' 
+             data-aos-delay='500'>
           <ServiceCard 
             icon="/images/s6.png" 
             title="Degital Agency" 
             description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, sapiente?"
-          />
+            />
+        </div>
           
         
       </div>

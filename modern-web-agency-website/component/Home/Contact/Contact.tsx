@@ -49,6 +49,8 @@ const Contact = () => {
                 width={900}
                 height={900}
                 className="mx-auto mt-16"
+                data-aos='zoom-out' 
+                data-aos-anchor-placement='top-center'
             />
             <div className="mt-16">
                 <h1 id="contact" className="text-xl font-semibold">
