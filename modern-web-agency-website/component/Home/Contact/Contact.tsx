@@ -33,7 +33,7 @@ const Contact = () => {
     }
 
   return (
-    <div id="contact" className="py-20">
+    <div  className="py-20">
         <div>
             <h1 className="text-red-500 dark:text-red-300 font-medium text-center">
                 Our Contact Information
@@ -51,7 +51,7 @@ const Contact = () => {
                 className="mx-auto mt-16"
             />
             <div className="mt-16">
-                <h1 className="text-xl font-semibold">
+                <h1 id="contact" className="text-xl font-semibold">
                     Send Massage
                 </h1>
                 {/* Form Section */}
@@ -71,7 +71,11 @@ const Contact = () => {
                                     message: 'Please enter a valid email'
                                 }})
                                 }/>
-                            {errors.email && <p className="text-red-500 text-xs mt-2  absolute -bottom-6 left-2">{errors.email.message}</p>}
+                            {errors.email && 
+                            <p className="text-red-500 text-xs mt-2 absolute -bottom-6 left-2">
+                                {errors.email.message}
+                            </p>
+                            }
                         </div>
 
                     {/* input phoneNumber */}
@@ -88,7 +92,11 @@ const Contact = () => {
                                     }
                                 })}
                             />
-                            {errors.phoneNumber && <p className="text-red-500 text-xs mt-2 whitespace-nowrap  absolute -bottom-6 left-2">{errors.phoneNumber.message}</p>}
+                            {errors.phoneNumber && 
+                            <p className="text-red-500 text-xs mt-2 whitespace-nowrap absolute -bottom-6 left-4">
+                                {errors.phoneNumber.message}
+                            </p>
+                            }
                         </div>
 
                     {/* input Website */}                
@@ -110,11 +118,14 @@ const Contact = () => {
                                 
                             })}
                             />
-                            {errors.message && <p className="text-red-500 text-xs mt-2 absolute -bottom-6 left-60">{errors.message.message}</p>}
+                            {errors.message && 
+                            <p className="text-red-500 text-xs mt-2 absolute -bottom-6 left-60">
+                                {errors.message.message}
+                            </p>}
                         </div>
-                    <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 mt-3 rounded-full font-medium transition-colors cursor-pointer">
+                    <button type="submit" className="mt-10 text-white rounded-full px-14 py-4 bg-pink-600 hover:bg-pink-500 transition-colors duration-200 cursor-pointer">
                         Send Massage
-                    </button>
+                    </button>  
                 </form>
             </div>
         </div>

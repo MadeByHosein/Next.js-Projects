@@ -3,6 +3,8 @@ import { Rubik } from "next/font/google";
 import "./globals.css";
 import Provider from "@/component/HOC/Provider";
 import ResponsiveNav from "@/component/Home/Navbar/ResponsiveNav";
+import Footer from '@/component/Home/Footer/Footer'
+import ScrollToTop from "@/component/Helper/ScrollToTop";
 
 
 
@@ -28,7 +30,9 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Provider >
           <ResponsiveNav />
-          {children}        
+          {children} 
+          <Footer /> 
+          <ScrollToTop />      
         </Provider>
         </body>
     </html>

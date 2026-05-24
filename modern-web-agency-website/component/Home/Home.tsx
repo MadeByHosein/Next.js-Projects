@@ -1,4 +1,4 @@
-import {Hero , About , Services, WhyChoose, Price, ClientReview, Order, Contact} from '../Home'
+import {Hero , About , Services, WhyChoose, Price, ClientReview, Order, Contact, Footer} from '../Home'
 
 const Home = () => {
   return (
@@ -10,7 +10,7 @@ const Home = () => {
       <Price />
       <ClientReview />
       <Order />
-      <Contact />
+      <Contact />     
     </div>
   )
 }

@@ -117,7 +117,7 @@ const Hero = () => {
                 <div>
                     <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full mb-8">
                         <GiSparkles className="h-5 w-5 text-yellow-400" />
-                        <span className="text-white font-medium ">Welcome to webwarriors</span>
+                        <span className="text-white font-medium ">Welcome to webdev</span>
                     </div>
                 </div>
 
